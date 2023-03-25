@@ -4,8 +4,8 @@ Meet ReconFace, the innovative facial recognition system developed for our hacka
 
 ReconFace is a Facial Recognition system using Django and Django Rest Framework as backend
 
-- website link: http://reconface.bitnaysh.tech/ 
-- Drive Link : https://drive.google.com/file/d/184btmiW7V-OK1QTw0OyT6fk4rliA0Jte/view?usp=sharing
+- Website link: http://reconface.bitnaysh.tech/ 
+- Presentation Google Drive Link : https://drive.google.com/file/d/184btmiW7V-OK1QTw0OyT6fk4rliA0Jte/view?usp=sharing
 
 # Basic Working 
 
