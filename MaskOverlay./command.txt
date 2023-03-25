@@ -1,0 +1,1 @@
+python3  final.py --cfg experiments/300w/face_alignment_300w_hrnet_w18.yaml --landmark_model HR18-300W.pth --mask_image masks/anti_covid.png --input_image_path input_folder/download.jpg
