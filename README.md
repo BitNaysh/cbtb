@@ -11,7 +11,7 @@ user uploads, also added the capability to add more images to the database
 - Implemented a Django API using Django Rest Framework to handle image uploads, generate encodings, match
 against stored images, return relevant matches to the frontend, and display the database on the frontend
 
-# Working
+# Working of the App
 
 - Dashboard to upload images ,A simple image file can be uploaded using the upload box on the dash board and press submit
 
@@ -32,4 +32,13 @@ against stored images, return relevant matches to the frontend, and display the 
 - Tab to view all the images in the database with their corresponding information
 
 ![image](https://user-images.githubusercontent.com/72181610/227723839-b9f28f91-f772-4aa9-9995-b4b32c211d0d.png)
+
+# Use Cases 
+
+- Used in missing/criminal cases
+To identify a person from a photograph ,which may be partially visible from the database using the web app
+
+- Used in High priority criminal cases
+Identify suspects based on the photographs or sketches  of suspects provided as input.
+
 
