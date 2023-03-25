@@ -97,7 +97,7 @@ const SidebarHeader = (props: SidebarHeaderProps) => {
       <img className="logo" src={logo} alt="logo-img" />
       {/* <Logo className='logo' /> */}
       {open && !textShrinking && (
-        <Typography variant="h3" component="h3">
+        <Typography fontWeight={300} fontSize={12} variant="h4" component="h4">
           ReconFace
         </Typography>
       )}

@@ -49,13 +49,13 @@ const navLinks = [
         iconSolid: Person,
         iconOutlined: PersonOutline,
     },
-    {
-        id: 3,
-        name: "Settings",
-        route: "settings",
-        iconSolid: Settings,
-        iconOutlined: SettingsOutlined,
-    },
+    // {
+    //     id: 3,
+    //     name: "Settings",
+    //     route: "settings",
+    //     iconSolid: Settings,
+    //     iconOutlined: SettingsOutlined,
+    // },
 ];
 
 export default navLinks;
