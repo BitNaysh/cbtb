@@ -206,4 +206,4 @@ EMAIL_HOST_PASSWORD = "As9utpr1VCTyHYM54T"
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
-MEDIA_URL = '/media/'
+MEDIA_URL = '/api/media/'

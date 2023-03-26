@@ -54,7 +54,7 @@ const Dashboard = () => {
     console.log(_file?.getAll("image_url")[0].toString());
     setIsLoading(true);
     const res = await axios.post(
-      `${process.env.REACT_APP_BACKEND_URL}/api/compare_face/media/`,
+      `${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/compare_face/media/`,
       _file,
       {
         headers: {
@@ -63,14 +63,17 @@ const Dashboard = () => {
       }
     );
     if (res) {
-      set_img_url(res.data.image_url);
+      set_img_url(
+        import.meta.env.VITE_REACT_APP_BACKEND_URL +
+          res.data.image_url.split("localhost:8000")[1]
+      );
       const match = res.data.matched_people.sort((p: any, p2: any) => {
         return p.tolerance - p2.tolerance;
       })[0];
       console.log(match);
       set_matched_person(match);
       set_img_url_match(
-        `${process.env.REACT_APP_BACKEND_URL}` + match.image_url
+        `${import.meta.env.VITE_REACT_APP_BACKEND_URL}` + match.image_url
       );
       setIsLoading(false);
       setShowResult(true);

@@ -20,8 +20,9 @@ const Details = () => {
   useEffect(() => {
     (async () => {
       const res = await axios.get(
-        `${process.env.REACT_APP_BACKEND_URL}/api/train_image/media/`
+        `${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/train_image/media/`
       );
+      console.log(res.data);
       setPeople(res.data);
     })();
   }, []);
@@ -77,11 +78,15 @@ const Details = () => {
       </Box>
       <Box className="sm:w-full md:w-11/12 mt-10 grid grid-cols-3 gap-2 overflow-y-scroll scrollbar scorl scrollbar-thin scrollbar- scrollbar-thumb-transparent scrollbar-track-transparent flex-grow">
         {people &&
-          people.map((person) => (
-            <div className="m-2  bg-slate-100 flex justify-start">
+          people.map((person, index) => (
+            <div key={index} className="m-2  bg-slate-100 flex justify-start">
               <img
                 className="object-cover w-1/2 h-40 m-5 rounded-md "
-                src={person.image_url}
+                src={
+                  import.meta.env.VITE_REACT_APP_BACKEND_URL +
+                  person.image_url.split("localhost:8000")[1]
+                }
+                alt="person"
               />
               <div className="w-1/2 pt-5 pr-5 flex flex-col gap-3">
                 <h2>

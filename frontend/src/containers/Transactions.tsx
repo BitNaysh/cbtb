@@ -43,7 +43,7 @@ const Transactions = () => {
     setIsLoading(true);
 
     const res = await axios.post(
-      `${process.env.REACT_APP_BACKEND_URL}/api/train_image/media/`,
+      `${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/train_image/media/`,
       _file,
       {
         headers: {
@@ -111,7 +111,11 @@ const Transactions = () => {
               <Box className="flex w-1/2 h-full align-middle justify-center">
                 <img
                   className=" object-contain  w-full h-72 m-3 rounded-md  "
-                  src={person && person.image_url}
+                  src={
+                    person &&
+                    import.meta.env.VITE_REACT_APP_BACKEND_URL +
+                      person.image_url.split("localhost:8000")[1]
+                  }
                   alt="img"
                 />
               </Box>
